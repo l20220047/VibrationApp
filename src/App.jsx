@@ -52,8 +52,9 @@ function App() {
       <label>
         délka vibrace: [delkaVibrace]ms
       </label>
-      <input type="range" min="100" max="5000" value={delkaVibrace} />
-      onchange={ (e) => setDelkaVibrace(Number(e.target.value)) } 
+      <input type="range" min="100" max="5000" value={delkaVibrace} onchange={ (e) => 
+        setDelkaVibrace(Number(e.target.value)) } />
+       
 
       <button onClick={zavibruj(delkaVibrace)}>Nastavitelna vibrace</button>
 

@@ -47,16 +47,16 @@ function App() {
       <h1>Vibration App</h1>
       <button onClick={zavibruj}>Vibrate</button>
       <button onClick={zavibrujSOS}>Vibrate SOS</button>
-      <button onClick={zavibrujCas(1000)}>Vibrate 1s</button>
+      <button onClick={() => zavibrujCas(1000)}>Vibrate 1s</button>
 
       <label>
-        délka vibrace: [delkaVibrace]ms
+        délka vibrace: {delkaVibrace}ms
       </label>
-      <input type="range" min="100" max="5000" value={delkaVibrace} onchange={ (e) => 
+      <input type="range" min="100" max="5000" value={delkaVibrace} onChange={ (e) => 
         setDelkaVibrace(Number(e.target.value)) } />
        
 
-      <button onClick={zavibruj(delkaVibrace)}>Nastavitelna vibrace</button>
+      <button onClick={() => zavibrujCas(delkaVibrace)}>Nastavitelna vibrace</button>
 
     </div>
     

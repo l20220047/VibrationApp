@@ -16,6 +16,18 @@ function App() {
 
   }
 
+  function zavibrujSOS(){
+    if("vibrate" in navigator){
+      //zarizeni podporuje vibrace
+      //funkce pro vibrace ,delka vibrace je v ms
+      navigator.vibrate([200,100,200,100,200,100,600,100,600,100,600]);
+    }
+    else{
+      alert("Toto zařízení nepodporuje vibrace.")
+    }
+  }
+    
+
   return (
     <div>
       <h1>Vibration App</h1>
